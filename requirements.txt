@@ -1,0 +1,12 @@
+# Core
+torch>=2.2
+numpy>=1.26
+
+# Step 1 (MNIST MLP check)
+torchvision>=0.17
+
+# Plotting loss curves and attention maps
+matplotlib>=3.8
+
+# Progress bars during training (optional)
+tqdm>=4.66
