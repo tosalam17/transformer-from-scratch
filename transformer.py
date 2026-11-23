@@ -1,5 +1,5 @@
 import torch
-
+import torch.nn as nn
 
 with open("data/input.txt", "r", encoding="utf-8") as f:
     text = f.read()
@@ -17,6 +17,12 @@ def decode(ids):
     return "".join(int_to_str[i] for i in ids)
 
 data = torch.tensor(encode(text), dtype=torch.long)
+
+ninety_per = len(data) * 0.9
+
+train_data = data[:ninety_per]
+val_data = data[ninety_per:]
+
 
 
 
